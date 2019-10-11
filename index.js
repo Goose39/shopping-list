@@ -4,17 +4,18 @@ function handleClicks() {
         let item = $('#shopping-list-entry').val();
         addItem(item);
     })
-
+    //Toggle Checked items
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
         event.stopPropagation();
         $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     })
-
+    //Delete items
      $('.shopping-list').on('click', '.shopping-item-delete', function(event){
         event.stopPropagation();
         $(this).closest('li').remove();
      })
 }
+
 //Function to add items to list
 function addItem(item) {
     $('.shopping-list').append(`
