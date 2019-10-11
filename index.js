@@ -3,6 +3,8 @@ function handleClicks() {
         event.preventDefault();
         let item = $('#shopping-list-entry').val();
         addItem(item);
+        //Clear input text after item is added.
+        $('#shopping-list-entry').val('');
     })
     //Toggle Checked items
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
